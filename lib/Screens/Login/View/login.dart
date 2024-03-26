@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -58,7 +60,7 @@ class LogIn extends GetView {
                           labelTextColor: secondaryColor,
                           hintTextColor: secondaryColor,
                           width: 531,
-                          validator: emptyStringValidator,
+                          validator: validateExpression,
                           controller: controller.userCnicController,
                           hintText: "Enter CNIC",
                           obscureText: false,

@@ -142,7 +142,7 @@ class SignUp extends StatelessWidget {
                             labelTextColor: secondaryColor,
                             hintTextColor: secondaryColor,
                             width: 531,
-                            validator: emptyStringValidator,
+                            validator: validateExpression,
                             controller: signupController.adminCnicController,
                             hintText: "Enter CNIC",
                             obscureText: false,

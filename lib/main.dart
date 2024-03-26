@@ -39,20 +39,16 @@ class _MyAppState extends State<MyApp> {
 
     getUserSharedPreferencesData();
   }
-  void getUserSharedPreferencesData() async
-  {
-    User user= await MySharedPreferences.getUserData();
+
+  void getUserSharedPreferencesData() async {
+    User user = await MySharedPreferences.getUserData();
     print(user.bearerToken);
-    if( user.bearerToken=="")
-    {
-      Timer(Duration(seconds: 3), ()=>  Get.offAndToNamed(login)    );
-
+    if (user.bearerToken == "") {
+      Timer(Duration(seconds: 3), () => Get.offAndToNamed(login));
+    } else {
+      Timer(Duration(seconds: 3),
+          () => Get.offAndToNamed(homescreen, arguments: user));
     }
-    else {
-      Timer(
-          Duration(seconds: 3), () => Get.offAndToNamed(homescreen, arguments: user));
-    }
-
   }
 
   @override
@@ -62,8 +58,6 @@ class _MyAppState extends State<MyApp> {
       initialRoute: splash,
       initialBinding: ScreenBindings(),
       debugShowCheckedModeBanner: false,
-
-
     );
   }
 }

@@ -1,0 +1,1 @@
+ /Users/tms/Documents/smart_gate_projects/GITHUB\ 2K24/SmartGate_SuperAdminApp/.dart_tool/flutter_build/8f37fe9cda420ee6df4334bcaee6e005/native_assets.yaml: 

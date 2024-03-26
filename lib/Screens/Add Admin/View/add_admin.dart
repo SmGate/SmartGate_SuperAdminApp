@@ -117,7 +117,7 @@ class AddAdmin extends GetView {
                                 labelTextColor: secondaryColor,
                                 hintTextColor: secondaryColor,
                                 width: MediaQuery.of(context).size.width * 0.49,
-                                validator: emptyStringValidator,
+                                validator: validateExpression,
                                 controller: controller.subAdminCnicController,
                                 hintText: "Enter CNIC",
                                 obscureText: false,

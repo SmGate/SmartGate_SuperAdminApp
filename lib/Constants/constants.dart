@@ -23,7 +23,7 @@ Future<String> getDate(BuildContext context) async {
             ),
             textButtonTheme: TextButtonThemeData(
               style: TextButton.styleFrom(
-                primary: primaryColor, // button text color
+                foregroundColor: primaryColor, // button text color
               ),
             ),
           ),
@@ -51,6 +51,17 @@ Future<String> getDate(BuildContext context) async {
       date.year.toString();
 
   return myDate;
+}
+
+//  ID CARD VALIDATOR
+String? validateExpression(String? value) {
+  RegExp regex = RegExp(r'^\d{5}-\d{7}-\d$');
+  if (value!.isEmpty) {
+    return 'Expression field cannot be empty.';
+  } else if (!regex.hasMatch(value)) {
+    return 'Invalid cnic  hint "37405-7384570-1"';
+  }
+  return null;
 }
 
 /* Validations */
